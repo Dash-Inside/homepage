@@ -1,12 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:lorem_ipsum/lorem_ipsum.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 part './home_page/title_widget.dart';
 part './home_page/works_widget.dart';
-part './home_page/about_us_widget.dart';
 
 class HomePage extends StatelessWidget {
   static const _backgroundAssetName = 'assets/home_background.jpg';
