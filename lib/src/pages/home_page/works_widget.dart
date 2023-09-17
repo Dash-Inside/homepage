@@ -12,14 +12,27 @@ class WorksWidget extends StatelessWidget {
       height: size.height * 2,
       color: Colors.orange[100]!,
       padding: const EdgeInsets.all(32.0),
-      child: const Text(
-        'Our Works',
-        style: TextStyle(
-          color: Colors.black,
-          fontSize: 32.0,
-          letterSpacing: 3.0,
-          height: 1.0,
-        ),
+      child: ListView(
+        children: const [
+          Text(
+            'Our Works',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 32.0,
+              letterSpacing: 5.0,
+              height: 1,
+            ),
+          ),
+          SizedBox(height: 24.0),
+          Text(
+            'Comming soon',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 24.0,
+              height: 1,
+            ),
+          ),
+        ],
       ),
     );
 
