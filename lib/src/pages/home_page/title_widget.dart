@@ -1,38 +1,42 @@
 part of '../home_page.dart';
 
 class TitleWidget extends StatelessWidget {
+  static const String _orgName = 'Dash Inside';
+  static const String _orgDesc = 'Non-Profit Developer Organization';
+
   const TitleWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
+    final Color primaryColor = Colors.orange[100]!;
 
     return SizedBox(
       width: size.width,
-      height: size.height,
+      height: size.height * 1,
       child: ScreenTypeLayout.builder(
         desktop: (_) {
-          return const Align(
+          return Align(
             alignment: Alignment.bottomRight,
             child: Padding(
-              padding: EdgeInsets.all(64.0),
+              padding: const EdgeInsets.all(64.0),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    'Dash Inside',
+                    _orgName,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: primaryColor,
                       fontSize: 128.0,
                       fontWeight: FontWeight.w400,
                       letterSpacing: 5,
                     ),
                   ),
                   Text(
-                    'Non-Profit Developer Organization',
+                    _orgDesc,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: primaryColor,
                       fontSize: 32.0,
                       fontWeight: FontWeight.w300,
                       letterSpacing: 5,
@@ -47,29 +51,29 @@ class TitleWidget extends StatelessWidget {
           return SizedBox(
             width: size.width,
             height: size.height,
-            child: const Align(
+            child: Align(
               alignment: Alignment.bottomRight,
               child: Padding(
-                padding: EdgeInsets.all(32.0),
+                padding: const EdgeInsets.all(32.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      'Dash Inside',
+                      _orgName,
                       style: TextStyle(
-                        color: Colors.white,
+                        color: primaryColor,
                         fontSize: 64.0,
                         fontWeight: FontWeight.w400,
                         height: 1.2,
                         letterSpacing: 5,
                       ),
                     ),
-                    SizedBox(height: 24.0),
+                    const SizedBox(height: 24.0),
                     Text(
-                      'Non-Profit Developer Organization',
+                      _orgDesc,
                       style: TextStyle(
-                        color: Colors.white,
+                        color: primaryColor,
                         fontSize: 32.0,
                         fontWeight: FontWeight.w300,
                         height: 1.2,
